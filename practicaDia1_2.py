@@ -75,29 +75,44 @@ print("Elige la opcion que mas te acomode\n"
       "1. Saludar\n"
       "2. Despedir")
 
-seleccion = int(input())
-if seleccion == 1:
+seleccion = input()
+if seleccion.isdigit():
+    seleccion = int(seleccion)
+
+    if seleccion == 1:
     print(saludo, nombre,"Gusto de tenerte aqui")
-elif seleccion == 2:
-    print(despedida, nombre, ",Espero tenerte aqui de nuevo")
+    elif seleccion == 2:
+        print(despedida, nombre, ",Espero tenerte aqui de nuevo")
+    else:
+        print("opcion invalida")
 else:
-    print("opcion invalida")
-'''
+    print("debes ingresar un numero)
+
+#Ejercio 8 de nuevo
 #Ejercicio 8: Número mayor de edad
 #Pide edad y:
 #Si no es número → error
 #Si es número:
 #=18 → “Mayor”
 #<18 → “Menor”
-
 entrada = input("Ingresa tu edad: ")
-
 if entrada.isdigit():
     edad = int(entrada)
-
     if edad >= 18:
-        print("Mayor")
+        print("mayor de edad")
     else:
-        print("menor")
+        print("menor de edad")
 else:
-    print("no es numero")
+    print("no es un numero")
+    '''
+#Ejercicio 9: Validar vacío + texto
+#Pide nombre:
+#Si está vacío → “Error”
+#Si no → mostrar nombre en minúsculas (.lower())
+
+entrada = input("Ingresa tu nombre: ")
+nombre = entrada.lower()
+if  nombre =="":
+    print("error, ingresa algo")
+else:
+    print(nombre)
