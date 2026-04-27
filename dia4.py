@@ -39,4 +39,43 @@ print(texto_invertido)# en este caso el bucle ingresa con la variable "invertir"
                       #en la variable "texto_invertido" en la segunda vuelta hace lo mismo pero lo concatena con el que ya estaba guardado
                       #anteriormente y al final se muestra al reves
                     
+
+#tabla de multiplicar
+entrada = int(input("Que tabla quieres ver: "))
+for i in range(11):
+    print(entrada , "x" , i , "=" , entrada * i)#este caso permite mostrar las tablas de multiplicar en consola mediante una entrada
+                                                # la variable i entra al rango de 0 a 10 y luego ejecuta la indicacion dada en el print
+                                                #y lo muestra en consola
+
+
+#imprimir una lista de nombres
+lista = ["Luis, Orion, Dariel"]
+
+for i in lista:
+    print("hola", i)
+    
+#sumar elementos de una lista
+lista = [2,3,4,5,6]
+suma =0
+for i in lista:
+    suma = i + suma
+    print(suma)
+    
+
+#recorre una cadena y cuenta cuantas vocales tiene
+frase = input("Ingresa una frase: ")
+contador=0
+
+for i in frase:
+    if i.lower() in "aeiou":
+        contador += 1
+print(contador)
+
+
+#generar una lista de cuadrados
+cuadrados = []
+for i in range(0,11):
+    cuadrados.append(i**2)
+print(cuadrados)
 '''
+
